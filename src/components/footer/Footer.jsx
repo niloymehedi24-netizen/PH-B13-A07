@@ -1,7 +1,41 @@
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 const Footer = () => {
   return (
-    <div>
-      <h2>This is Footer</h2>
+    <div className="bg-green-900">
+      <div className="max-w-7xl mx-auto py-10 space-y-6 text-white text-center items-center">
+        <h2 className="font-bold text-5xl">
+          Keen<span className="font-normal text-5xl">Keeper</span>
+        </h2>
+        <p className="font-normal">
+          Your personal shelf of meaningful connections. Browse, tend, and
+          nurture the relationships that matter most.
+        </p>
+        <div>
+          <p>Social Links</p>
+          <div>
+            <button>
+              <FaInstagram></FaInstagram>
+            </button>
+            <button>
+              <FaFacebook></FaFacebook>
+            </button>
+            <button>
+              <FaXTwitter></FaXTwitter>
+            </button>
+          </div>
+          <hr className="mt-5" />
+        </div>
+        <div className="flex justify-between">
+          <p>© 2026 KeenKeeper. All rights reserved.</p>
+          <div className="flex justify-around gap-4">
+            <p>Privacy Policy</p>
+            <p>Terms of Service</p>
+            <p>Cookies</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
