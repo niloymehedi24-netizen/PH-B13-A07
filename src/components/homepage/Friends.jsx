@@ -32,9 +32,11 @@ const Friends = ({ friendsPromise }) => {
                   <p key={index}>{tag}</p>
                 ))}
               </div>
-              <p className="text-green-900 bg-green-400 rounded-xl w-20 ml-15">
-                {friend.status}
-              </p>
+              <div
+                className={`rounded-xl w-25 ml-12 mb-2 ${friend.status === "overdue" ? "bg-red-500 text-white" : friend.status === "almost due" ? "bg-yellow-400 text-white" : friend.status === "on-track" ? "bg-green-900 text-white" : ""}`}
+              >
+                <p>{friend.status}</p>
+              </div>
             </div>
           </div>
         ))}
