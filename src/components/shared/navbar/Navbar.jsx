@@ -1,39 +1,21 @@
-import { FaHome } from "react-icons/fa";
-import { ImStatsDots } from "react-icons/im";
-import { RiTimeLine } from "react-icons/ri";
-import { Link } from "react-router";
+import MyNavLink from "../MyNavLink";
 
 const Navbar = () => {
   return (
     <div>
-      <div className="flex justify-between max-w-7xl mx-auto">
+      <div className="flex justify-between max-w-7xl mx-auto py-4">
         <h2 className="text-3xl font-bold">
           Keen<span className="text-3xl text-green-900">Keeper</span>
         </h2>
-        <ul className="flex justify-between gap-4">
+        <ul className="flex justify-between gap-2">
           <li>
-            <Link to={"/"} className="flex items-center gap-0.5">
-              <span className="text-gray-600">
-                <FaHome></FaHome>
-              </span>
-              Home
-            </Link>
+            <MyNavLink to={"/"}>Home</MyNavLink>
           </li>
           <li>
-            <Link to={"/timeline"} className="flex items-center gap-0.5">
-              <span className="text-gray-600">
-                <RiTimeLine></RiTimeLine>
-              </span>
-              Timeline
-            </Link>
+            <MyNavLink to={"/timeline"}>Timeline</MyNavLink>
           </li>
           <li>
-            <Link to={"/stats"} className="flex items-center gap-0.5">
-              <span className="text-gray-600">
-                <ImStatsDots></ImStatsDots>
-              </span>
-              Stats
-            </Link>
+            <MyNavLink to={"/stats"}>Stats</MyNavLink>
           </li>
         </ul>
       </div>
