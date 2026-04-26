@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import MainLayout from "../layout/MainLayout";
 import Homepage from "../pages/homepage/Homepage";
-import Friends from "../pages/friends/Friends";
 import ErrorPage from "../pages/errorPage/ErrorPage";
 import Stats from "../pages/stats/Stats";
 import Timeline from "../pages/timeline/Timeline";
@@ -14,10 +13,6 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Homepage></Homepage>,
-      },
-      {
-        path: "/friends",
-        element: <Friends></Friends>,
       },
       {
         path: "/timeline",

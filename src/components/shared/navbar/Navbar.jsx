@@ -4,8 +4,8 @@ const Navbar = () => {
   return (
     <div>
       <div className="flex justify-between max-w-7xl mx-auto py-4">
-        <h2 className="text-3xl font-bold">
-          Keen<span className="text-3xl text-green-900">Keeper</span>
+        <h2 className="text-xl font-bold">
+          Keen<span className="text-xl text-green-900">Keeper</span>
         </h2>
         <ul className="flex justify-between gap-2">
           <li>
