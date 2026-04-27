@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { use } from "react";
 import { FiArchive } from "react-icons/fi";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
@@ -6,6 +7,8 @@ import { LuPhoneCall } from "react-icons/lu";
 import { MdOutlineTextsms } from "react-icons/md";
 import { RiDeleteBin7Line } from "react-icons/ri";
 import { useParams } from "react-router";
+import { TimelineContext } from "../../context/Context";
+import { toast } from "react-toastify";
 
 const FriendDetails = ({ friendsPromise }) => {
   const { id } = useParams();
@@ -13,6 +16,19 @@ const FriendDetails = ({ friendsPromise }) => {
   const friends = use(friendsPromise);
 
   const expectedFriend = friends.find((friend) => friend.id == id);
+
+  const { timelineData, setTimelineData } = useContext(TimelineContext);
+
+  const handleContact = (type, userDetails) => {
+    const newData = {
+      ...userDetails,
+      action: type,
+      time: new Date().toISOString(),
+    };
+
+    setTimelineData([...timelineData, newData]);
+    toast.success("Contacted Successfully");
+  };
 
   return (
     <div className="max-w-5xl mx-auto m-12 grid grid-cols-2 gap-4">
@@ -107,17 +123,17 @@ const FriendDetails = ({ friendsPromise }) => {
           <p className="text-green-900 p-4">Quick Check-In</p>
           <div className="flex justify-around">
             <div className="border border-zinc-200 bg-gray-200 shadow-lg w-40 h-20 items-center text-center rounded-md pt-5 hover:cursor-pointer">
-              <button>
+              <button onClick={() => handleContact("call", expectedFriend)}>
                 <LuPhoneCall></LuPhoneCall>Call
               </button>
             </div>
             <div className="border border-zinc-200 bg-gray-200 shadow-lg w-40 h-20 items-center text-center rounded-md pt-5 hover:cursor-pointer">
-              <button>
+              <button onClick={() => handleContact("text", expectedFriend)}>
                 <MdOutlineTextsms></MdOutlineTextsms>Text
               </button>
             </div>
             <div className="border border-zinc-200 bg-gray-200 shadow-lg w-40 h-20 items-center text-center rounded-md pt-5 hover:cursor-pointer">
-              <button>
+              <button onClick={() => handleContact("video", expectedFriend)}>
                 <IoVideocamOutline></IoVideocamOutline> Video
               </button>
             </div>

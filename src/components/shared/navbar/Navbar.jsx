@@ -2,8 +2,12 @@ import { RiTimeLine } from "react-icons/ri";
 import MyNavLink from "../MyNavLink";
 import { FaHome } from "react-icons/fa";
 import { ImStatsDots } from "react-icons/im";
+import { useContext } from "react";
+import { TimelineContext } from "../../../context/Context";
 
 const Navbar = () => {
+  const { timelineData } = useContext(TimelineContext);
+
   return (
     <div>
       <div className="flex justify-between max-w-7xl mx-auto py-4">
@@ -24,7 +28,7 @@ const Navbar = () => {
               <span>
                 <RiTimeLine></RiTimeLine>
               </span>
-              Timeline
+              Timeline({timelineData.length})
             </MyNavLink>
           </li>
           <li>
