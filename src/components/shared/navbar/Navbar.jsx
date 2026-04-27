@@ -1,4 +1,7 @@
+import { RiTimeLine } from "react-icons/ri";
 import MyNavLink from "../MyNavLink";
+import { FaHome } from "react-icons/fa";
+import { ImStatsDots } from "react-icons/im";
 
 const Navbar = () => {
   return (
@@ -9,13 +12,28 @@ const Navbar = () => {
         </h2>
         <ul className="flex justify-between gap-2">
           <li>
-            <MyNavLink to={"/"}>Home</MyNavLink>
+            <MyNavLink to={"/"}>
+              <span>
+                <FaHome></FaHome>
+              </span>
+              Home
+            </MyNavLink>
           </li>
           <li>
-            <MyNavLink to={"/timeline"}>Timeline</MyNavLink>
+            <MyNavLink to={"/timeline"}>
+              <span>
+                <RiTimeLine></RiTimeLine>
+              </span>
+              Timeline
+            </MyNavLink>
           </li>
           <li>
-            <MyNavLink to={"/stats"}>Stats</MyNavLink>
+            <MyNavLink to={"/stats"}>
+              <span>
+                <ImStatsDots></ImStatsDots>
+              </span>
+              Stats
+            </MyNavLink>
           </li>
         </ul>
       </div>

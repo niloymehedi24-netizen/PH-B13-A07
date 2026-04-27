@@ -1,17 +1,18 @@
 import { use } from "react";
+import { Link } from "react-router";
 
 const Friends = ({ friendsPromise }) => {
   const friends = use(friendsPromise);
-  console.log(friends);
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto mb-15">
       <div className="mt-10">
         <h2 className="font-bold text-xl">Your Friends</h2>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-3">
         {friends.map((friend) => (
-          <div
+          <Link
+            to={`friends/${friend.id}`}
             key={friend.id}
             className="shadow-lg rounded-md border border-zinc-200 p-5"
           >
@@ -38,7 +39,7 @@ const Friends = ({ friendsPromise }) => {
                 <p>{friend.status}</p>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

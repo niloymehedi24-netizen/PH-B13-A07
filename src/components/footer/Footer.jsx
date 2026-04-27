@@ -16,13 +16,19 @@ const Footer = () => {
           <p>Social Links</p>
           <div>
             <button>
-              <FaInstagram></FaInstagram>
+              <a href="">
+                <FaInstagram></FaInstagram>
+              </a>
             </button>
             <button>
-              <FaFacebook></FaFacebook>
+              <a href="">
+                <FaFacebook></FaFacebook>
+              </a>
             </button>
             <button>
-              <FaXTwitter></FaXTwitter>
+              <a href="">
+                <FaXTwitter></FaXTwitter>
+              </a>
             </button>
           </div>
           <hr className="mt-5" />
@@ -30,9 +36,9 @@ const Footer = () => {
         <div className="flex justify-between">
           <p>© 2026 KeenKeeper. All rights reserved.</p>
           <div className="flex justify-around gap-4">
-            <p>Privacy Policy</p>
-            <p>Terms of Service</p>
-            <p>Cookies</p>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Service</a>
+            <a href="">Cookies</a>
           </div>
         </div>
       </div>

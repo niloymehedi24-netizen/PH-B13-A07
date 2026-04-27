@@ -13,7 +13,7 @@ const Banner = () => {
           relationships that matter most.
         </p>
         <div className="flex justify-center items-center text-center gap-1">
-          <button className="flex items-center border p-2 text-white bg-green-900 rounded-md">
+          <button className="flex items-center border p-2 text-white bg-green-900 rounded-md hover:cursor-pointer">
             <GoPlus></GoPlus>Add a Friend
           </button>
         </div>

@@ -4,6 +4,14 @@ import Homepage from "../pages/homepage/Homepage";
 import ErrorPage from "../pages/errorPage/ErrorPage";
 import Stats from "../pages/stats/Stats";
 import Timeline from "../pages/timeline/Timeline";
+import FriendDetails from "../pages/friendDetails/FriendDetails";
+
+const getFriends = async () => {
+  const res = await fetch("/public/data.json");
+  return res.json();
+};
+
+const friendsPromise = getFriends();
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +29,12 @@ export const router = createBrowserRouter([
       {
         path: "/stats",
         element: <Stats></Stats>,
+      },
+      {
+        path: "/friends/:id",
+        element: (
+          <FriendDetails friendsPromise={friendsPromise}></FriendDetails>
+        ),
       },
     ],
     errorElement: <ErrorPage></ErrorPage>,
