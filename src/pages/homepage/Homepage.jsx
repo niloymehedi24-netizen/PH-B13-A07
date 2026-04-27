@@ -3,7 +3,7 @@ import Friends from "../../components/homepage/Friends";
 import Statistics from "../../components/homepage/Statistics";
 
 const getFriends = async () => {
-  const res = await fetch("/public/data.json");
+  const res = await fetch("/data.json");
   return res.json();
 };
 

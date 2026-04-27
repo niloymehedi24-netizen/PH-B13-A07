@@ -7,7 +7,7 @@ import Timeline from "../pages/timeline/Timeline";
 import FriendDetails from "../pages/friendDetails/FriendDetails";
 
 const getFriends = async () => {
-  const res = await fetch("/public/data.json");
+  const res = await fetch("/data.json");
   return res.json();
 };
 
