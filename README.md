@@ -1,16 +1,45 @@
-# React + Vite
+# 📅 Friend Contact Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Project Description
 
-Currently, two official plugins are available:
+Friend Contact Tracker is a simple yet powerful web application that helps you manage and maintain your personal relationships. It allows you to track when you last contacted your friends and reminds you when it's time to reconnect.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚛️ React.js
+- ⚡ Next.js
+- 🎨 Tailwind CSS
+- 📦 Context API (State Management)
+- 🔔 React Hot Toast (Notifications)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features
+
+### 1. 📊 Smart Contact Tracking
+
+Track when you last contacted each friend and automatically categorize them as **overdue**, **almost due**, or **on-track**.
+
+### 2. 🕒 Activity Timeline (History Page)
+
+View a detailed history of your interactions (calls, messages, video calls) with timestamps in a clean timeline UI.
+
+### 3. 🎯 Dynamic Status & UI
+
+Friends are visually highlighted with different colors based on their contact status, making it easy to prioritize who to reach out to.
+
+---
+
+## 📌 Future Improvements
+
+- 🔔 Reminder notifications
+- 📱 Mobile responsiveness improvements
+- ☁️ Backend integration (database + authentication)
+
+---
+
+## 👨‍💻 Author
+
+Developed by Mehedi Hasan Niloy

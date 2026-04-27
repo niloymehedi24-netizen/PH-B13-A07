@@ -25,7 +25,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    background: "linear-gradient(135deg, #667eea, #764ba2)",
+    background: "white",
     fontFamily: "Arial, sans-serif",
   },
   card: {
@@ -40,7 +40,7 @@ const styles = {
   code: {
     fontSize: "80px",
     margin: "0",
-    color: "#764ba2",
+    color: "#16a34a",
   },
   title: {
     margin: "10px 0",
@@ -54,7 +54,7 @@ const styles = {
     padding: "10px 20px",
     border: "none",
     borderRadius: "8px",
-    background: "#667eea",
+    background: "#16a34a",
     color: "#fff",
     cursor: "pointer",
     fontSize: "16px",

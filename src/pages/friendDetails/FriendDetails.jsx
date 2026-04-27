@@ -31,7 +31,7 @@ const FriendDetails = ({ friendsPromise }) => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto m-12 grid grid-cols-2 gap-4">
+    <div className="max-w-5xl mx-auto m-12 grid lg:grid-cols-2 gap-4">
       <div>
         <div>
           <div className="w-95 h-90 ml-15 p-5 mb-5 border border-zinc-200 shadow-lg rounded-md">
